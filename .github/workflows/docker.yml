@@ -31,4 +31,3 @@ jobs:
     - name: Run a multi-line script
       run: |
         docker build . -t test
-        docker push test

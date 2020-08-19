@@ -22,6 +22,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    # Docker Login      
+    - name: Docker Login
+    - run: |
+        docker login --username anupsamyal --password 1ab0283f-c7e1-4bc4-94ad-5ccb7378284f
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
@@ -31,3 +35,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         docker build . -t test
+        docker push anupsamyal/testing:tagname

@@ -35,4 +35,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         docker build . -t test
-        docker push anupsamyal/testing:tagname
+        docker push anupsamyal/testing:test

@@ -1,4 +1,4 @@
-FROM node:12.2.0.slim
+FROM node:14.8.0-stretch-slim
 
 WORKDIR /src
 ENV PORT=8080

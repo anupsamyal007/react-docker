@@ -34,5 +34,5 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        docker build . -t anupsamyal/testing
-        docker push anupsamyal/testing:tagname
+        docker build . -t anupsamyal/testing:1.0.0
+        docker push anupsamyal/testing:1.0.0

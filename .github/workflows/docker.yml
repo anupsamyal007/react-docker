@@ -24,7 +24,7 @@ jobs:
     - uses: actions/checkout@v2
     # Docker Login      
     - name: Docker Login
-    - run: |
+      run: |
         docker login --username anupsamyal --password 1ab0283f-c7e1-4bc4-94ad-5ccb7378284f
 
     # Runs a single command using the runners shell

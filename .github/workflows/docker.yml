@@ -18,6 +18,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
+    - name: Docker Login
+      run: |
+        echo ${aws ecr get-login-password --region ap-south-1}
+        
     # Docker Login      
     - name: Docker Login
       env:
@@ -27,10 +31,6 @@ jobs:
         echo aws ecr get-login-password --region ap-south-1
         | aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 664690038126.dkr.ecr.ap-south-1.amazonaws.com
       # docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-
-    - name: Docker Login
-      run: |
-        echo ${aws ecr get-login-password --region ap-south-1}
 
     # Runs a set of commands using the runners shell
     - name: Run Docker build script

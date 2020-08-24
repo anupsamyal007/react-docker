@@ -29,7 +29,7 @@ jobs:
        DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
-        aws ecr --region ap-south-1 get-login-password| docker login --username AWS --password-stdin 664690038126.dkr.ecr.ap-south-1.amazonaws.com
+        aws ecr --region ap-south-1 get-login-password | docker login --password-stdin --username AWS 664690038126.dkr.ecr.ap-south-1.amazonaws.com
       # docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
     # Runs a set of commands using the runners shell

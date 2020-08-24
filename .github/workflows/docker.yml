@@ -20,7 +20,8 @@ jobs:
       
     - name: Docker Login
       run: |
-        echo ${aws ecr get-login-password --region ap-south-1}
+        test: aws ecr get-login-password --region ap-south-1 |
+        echo ${test}
         
     # Docker Login      
     - name: Docker Login

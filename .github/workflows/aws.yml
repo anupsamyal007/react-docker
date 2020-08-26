@@ -44,7 +44,7 @@ jobs:
         aws-region: ap-south-1
 
     - name: Login to Amazon ECR
-      id: 664690038126:user/github-action
+      id: ${{ secrets.ECR_ID }}
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build, tag, and push image to Amazon ECR
